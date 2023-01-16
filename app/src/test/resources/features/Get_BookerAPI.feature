@@ -44,10 +44,46 @@ Feature: Realizar pruebas a los metodos GET de la API RESTFUL - BOOKER
 
     @unHappypath
     Scenario: Verificar que al realizar la consulta solo con el nombre no registrado no se obtenga información
-      When Envio una peticion GET solo con el nombre no registrado al endpoint /booking?firstname=carlossss
+      When Envio una peticion GET solo con el nombre no registrado al endpoint /booking?firstname=Juan
       Then valido que no se obtenga información con el nombre no registrado y el codigo de estatus 200 OK
 
     @unHappypath
     Scenario: Verificar que al realizar la consulta solo con el apellido no registrado no se obtenga información
-      When Envio una peticion GET solo con el nombre no registrado al endpoint /booking?lastname=Brownes
+      When Envio una peticion GET solo con el nombre no registrado al endpoint /booking?lastname=Robles
       Then valido que no se obtenga información con el apellido no registrado y el codigo de estatus 200 OK
+
+    @happypath
+    Scenario: Verificar que se obtenga información correcta al realizar la consulta con un rango de fechas de checkIn y checkOut
+      When Envio una peticion con el rango de fechas checkin y checkout al endpoint /booking?checkin=2021-01-01&checkout=2023-01-01
+      Then valido que se obtenga la relacion de bookingId registrados en el rango de fechas y el codigo de estatus 200 OK
+
+    @happypath
+    Scenario: Verificar que se obtenga información correcta al realizar la consulta con solo la fecha checkIn
+      When Envio una peticion solo con la fecha checkin al endpoint /booking?checkin=2021-01-01
+      Then valido que se obtenga la relacion de bookingId registrados en la fecha de CheckIn y el codigo de estatus 200 OK
+
+    @happypath
+    Scenario: Verificar que se obtenga información correcta al realizar la consulta con solo la fecha checkOut
+      When Envio una peticion solo con la fecha checkout al endpoint /booking?checkout=2023-01-01
+      Then valido que se obtenga la relacion de bookingId registrados en la fecha de CheckOut y el codigo de estatus 200 OK
+
+    @unHappypath
+    Scenario: Verificar que al realizar la consulta de información con un formato de fechas invalido no se obtengan resultados
+      When Envio una peticion con formato de fechas invalido al endpoint /booking?checkin=2021-1-01&checkout=20-01-45
+      Then valido el codigo de estatus 500 Internal Server Error
+
+    @unHappypath
+    Scenario: Verificar que no se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut donde no se encuentren registros
+      When Envio una peticion con el rango de fechas checkin y checkout al endpoint /booking?checkin=2023-01-10&checkout=2023-01-12
+      Then valido que no se obtenga información y el codigo de estatus 200 OK
+
+
+
+
+
+
+
+
+
+
+
