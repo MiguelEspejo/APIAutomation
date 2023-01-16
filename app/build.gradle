@@ -39,7 +39,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'apiautomation.App'
+    mainClass = 'apiautomation.Runner'
 }
 
 tasks.named('test') {
