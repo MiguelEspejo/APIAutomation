@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue= "apiautomation.steps",
-    tags = "@ListUser",
+    tags = "@happyPath_test",
     plugin = {
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "json:target/cucumber-reports.json"},
