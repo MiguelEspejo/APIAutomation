@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="se agregaron los steps del metodo post">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/DeleteAPIBookerSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/GetAPIBookerSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PutPatchAPIBookerSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_UpdCorrecto.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_UpdFechaInv.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_pachFechaInv.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_patchCorrecto.json" afterDir="false" />
+    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="se crearon los steps para los metodos put, patch, delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PostAPIBookerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PostAPIBookerSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/DeleteAPIBookerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/DeleteAPIBookerSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/GetAPIBookerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/GetAPIBookerSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Put-Patch_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Put-Patch_BookerAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/cucumber-reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/cucumber-reports.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,55 +94,15 @@
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados">
-    <configuration name="Feature: Delete_BookerAPI" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Gradle.Runner">
+    <configuration name="Feature: Get_BookerAPI" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: Delete_BookerAPI" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Verificar que al consultar el endpoint /booking se obtenga toda la relación de Ids registrados" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" />
-      <option name="GLUE" value="apiautomation.steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="APIAutomation.app.test" />
-      <option name="NAME_FILTER" value="^Verificar que al consultar el endpoint \/booking se obtenga toda la relación de Ids registrados$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que al consultar el endpoint \/booking se obtenga toda la relación de Ids registrados$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verificar que al consultar el endpoint /booking se obtenga toda la relación de Ids registrados" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" />
-      <option name="GLUE" value="apiautomation.steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="APIAutomation.app.test" />
-      <option name="NAME_FILTER" value="^Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados" />
+      <option name="SUGGESTED_NAME" value="Feature: Get_BookerAPI" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -196,13 +154,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Verificar que se permita eliminar registros del servicio con un token valido y un id valido" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" />
+      <option name="GLUE" value="apiautomation.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="APIAutomation.app.test" />
+      <option name="NAME_FILTER" value="^Verificar que se permita eliminar registros del servicio con un token valido y un id valido$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que se permita eliminar registros del servicio con un token valido y un id valido$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verificar que se permita eliminar registros del servicio con un token valido y un id valido" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+            <option value="--tests" />
+            <option value="&quot;apiautomation.runner.Runner&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados" />
-        <item itemvalue="Cucumber Java.Scenario: Verificar que al consultar el endpoint /booking se obtenga toda la relación de Ids registrados" />
-        <item itemvalue="Cucumber Java.Feature: Delete_BookerAPI" />
+        <item itemvalue="Gradle.Runner" />
+        <item itemvalue="Cucumber Java.Scenario: Verificar que se permita eliminar registros del servicio con un token valido y un id valido" />
         <item itemvalue="Cucumber Java.Scenario: Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto" />
         <item itemvalue="Cucumber Java.Scenario: Verificar que al realizar una solicitud Delete al servidor con un token valido y un id Invalido o no existente se muestre un mensaje de validacion" />
+        <item itemvalue="Cucumber Java.Feature: Get_BookerAPI" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673987794572</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="se crearon los steps para los metodos put, patch, delete">
+      <created>1674035247286</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674035247286</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,7 +294,8 @@
     <MESSAGE value="creación de feature para metodo POST y GET de la api booking" />
     <MESSAGE value="Actualización de features para los metodos get y put-patch" />
     <MESSAGE value="se agregaron los steps del metodo post" />
-    <option name="LAST_COMMIT_MESSAGE" value="se agregaron los steps del metodo post" />
+    <MESSAGE value="se crearon los steps para los metodos put, patch, delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="se crearon los steps para los metodos put, patch, delete" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/APIAutomation$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1673844556631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -20,7 +20,7 @@ public class DeleteAPIBookerSteps {
     private String jsonResponseBookingId;
 
     //background
-    @Given("^Ingreso a la API restful Booker para realizar peticiones GET (.+)$")
+    @Given("^Ingreso a la API restful Booker para realizar peticiones Delete (.+)$")
     public void accesoAlservicio(String uri){
         request = given()
                 .header("Content-Type","application/json")
