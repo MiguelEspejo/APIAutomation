@@ -47,9 +47,6 @@ public class PostAPIBookerSteps {
         assertTrue("El token se creeo correctamente ", jsonResponseToken.contains(tokenExiste));
     }
 
-    //generación de token usuario incorrecto
-
-
     //generación de token contraseña incorrecta
     @When("^Envio una solicitud con las credenciales incorrectas (.+) al endpoint (.+)")
     public void crearTokenCredMal(String pl_AuthInv, String endPoint){
@@ -68,13 +65,6 @@ public class PostAPIBookerSteps {
         String jsonResponseTokenUsrInv = response.jsonPath().getString("$");
         assertTrue("Se genero el token correctamente y no se mostro el mensaje de validacion ", jsonResponseTokenUsrInv.contains(msjValidacion));
     }
-
-
-
-
-
-
-
 
     //crear booking
     @When("^Envio una peticion POST con el (.+) correcto al endpoint (.+)$")

@@ -1,19 +1,17 @@
-#@RegresionBooker_GET
-#Feature: Realizar pruebas a los metodos GET de la API RESTFUL - BOOKER
-#
-#  Rule: Cuando se realicen peticiones GET al sevidor deberíamos obtener la información sin inconvenientes y a su vez poder tener una integración de la información.
-#
-# comentado para que no falle el build
-#
-#    Background: Ingreso a la API restful Booker
-#      Given Que puedo acceder al servicio con la URI https://restful-booker.herokuapp.com
-#
-#    #Obtener datos del API#
-#    @happypath
-#    Scenario: Verificar que al consultar el endpoint /booking se obtenga toda la relación de Ids registrados
-#      When Envio una peticion GET al endpoint /booking
-#      Then valido que se obtenga información en la consulta y el codigo de estatus 200 OK
-#
+@RegresionBooker_GET
+Feature: Realizar pruebas a los metodos GET de la API RESTFUL - BOOKER
+
+  Rule: Cuando se realicen peticiones GET al sevidor deberíamos obtener la información sin inconvenientes y a su vez poder tener una integración de la información.
+
+    Background: Ingreso a la API restful Booker
+      Given Ingreso a la API restful Booker https://restful-booker.herokuapp.com
+
+    #Obtener datos del API#
+    @happypath
+    Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados
+      When Envio una solicitud para obtener todos los registros del servicio al endpoint /booking
+      Then Valido que se obtenga informacion en la consulta y el codigo de estatus 200 OK
+
 #    @happypath
 #    Scenario: Verificar que al consultar el endpoint /booking enviando el parametro ID se obtenga la información correspondiente al id que se encuentra registrado
 #      When Envio una peticion GET con el parametro 111 al endpoint /booking/:id

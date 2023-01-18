@@ -4,26 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="Actualización de features para los metodos get y put-patch">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PostAPIBookerSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_Auth.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_AuthCredInv.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_AuthCredVacias.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_Auth_passInv.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_Auth_usrInv.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_crearBooking.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_crearBookingDatoFaltante.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_crearBookingFechaInv.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_crearTotPriceDec.json" afterDir="false" />
+    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="se agregaron los steps del metodo post">
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/DeleteAPIBookerSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/GetAPIBookerSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PutPatchAPIBookerSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_UpdCorrecto.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_UpdFechaInv.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_pachFechaInv.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_patchCorrecto.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/runner/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PostAPIBookerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PostAPIBookerSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Put-Patch_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Put-Patch_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/cucumber-reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/cucumber-reports.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +77,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2KOY0S8VwTJiFLKVCq8AOot6T0q" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -100,15 +96,15 @@
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Feature: Post_BookerAPI">
-    <configuration name="Feature: Post_BookerAPI" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados">
+    <configuration name="Feature: Delete_BookerAPI" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: Post_BookerAPI" />
+      <option name="SUGGESTED_NAME" value="Feature: Delete_BookerAPI" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -120,15 +116,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verificar que al consultar el endpoint /booking se obtenga toda la relación de Ids registrados" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
-      <option name="NAME_FILTER" value="^Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker" />
+      <option name="NAME_FILTER" value="^Verificar que al consultar el endpoint \/booking se obtenga toda la relación de Ids registrados$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que al consultar el endpoint \/booking se obtenga toda la relación de Ids registrados$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verificar que al consultar el endpoint /booking se obtenga toda la relación de Ids registrados" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -140,15 +136,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verificar que cuando se envie usuario correcto y contraseña incorrecta se muestre una validación indicando credenciales invalidas y no se obtenga el token" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
-      <option name="NAME_FILTER" value="^Verificar que cuando se envie usuario correcto y contraseña incorrecta se muestre una validación indicando credenciales invalidas y no se obtenga el token$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que cuando se envie usuario correcto y contraseña incorrecta se muestre una validación indicando credenciales invalidas y no se obtenga el token$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verificar que cuando se envie usuario correcto y contraseña incorrecta se muestre una validación indicando credenciales invalidas y no se obtenga el token" />
+      <option name="NAME_FILTER" value="^Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -160,15 +156,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verificar que cuando se envie usuario incorrecto y contraseña correcta se muestre una validación indicando credenciales invalidas y no se obtenga el token" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verificar que al realizar una solicitud Delete al servidor con un token valido y un id Invalido o no existente se muestre un mensaje de validacion" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
-      <option name="NAME_FILTER" value="^Verificar que cuando se envie usuario incorrecto y contraseña correcta se muestre una validación indicando credenciales invalidas y no se obtenga el token$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que cuando se envie usuario incorrecto y contraseña correcta se muestre una validación indicando credenciales invalidas y no se obtenga el token$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verificar que cuando se envie usuario incorrecto y contraseña correcta se muestre una validación indicando credenciales invalidas y no se obtenga el token" />
+      <option name="NAME_FILTER" value="^Verificar que al realizar una solicitud Delete al servidor con un token valido y un id Invalido o no existente se muestre un mensaje de validacion$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que al realizar una solicitud Delete al servidor con un token valido y un id Invalido o no existente se muestre un mensaje de validacion$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verificar que al realizar una solicitud Delete al servidor con un token valido y un id Invalido o no existente se muestre un mensaje de validacion" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -180,15 +176,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verificar que no se genere token al solicitar la generación con las credenciales usuario y contraseña vacias" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
-      <option name="NAME_FILTER" value="^Verificar que no se genere token al solicitar la generación con las credenciales usuario y contraseña vacias$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que no se genere token al solicitar la generación con las credenciales usuario y contraseña vacias$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verificar que no se genere token al solicitar la generación con las credenciales usuario y contraseña vacias" />
+      <option name="NAME_FILTER" value="^Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -202,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: Post_BookerAPI" />
-        <item itemvalue="Cucumber Java.Scenario: Verificar que cuando se envie usuario correcto y contraseña incorrecta se muestre una validación indicando credenciales invalidas y no se obtenga el token" />
-        <item itemvalue="Cucumber Java.Scenario: Verificar que no se genere token al solicitar la generación con las credenciales usuario y contraseña vacias" />
-        <item itemvalue="Cucumber Java.Scenario: Verificar que cuando se envie usuario incorrecto y contraseña correcta se muestre una validación indicando credenciales invalidas y no se obtenga el token" />
-        <item itemvalue="Cucumber Java.Scenario: Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker" />
+        <item itemvalue="Cucumber Java.Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados" />
+        <item itemvalue="Cucumber Java.Scenario: Verificar que al consultar el endpoint /booking se obtenga toda la relación de Ids registrados" />
+        <item itemvalue="Cucumber Java.Feature: Delete_BookerAPI" />
+        <item itemvalue="Cucumber Java.Scenario: Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto" />
+        <item itemvalue="Cucumber Java.Scenario: Verificar que al realizar una solicitud Delete al servidor con un token valido y un id Invalido o no existente se muestre un mensaje de validacion" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673901427438</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="se agregaron los steps del metodo post">
+      <created>1673987794572</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673987794572</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -282,7 +285,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creación de feature para metodo POST y GET de la api booking" />
     <MESSAGE value="Actualización de features para los metodos get y put-patch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización de features para los metodos get y put-patch" />
+    <MESSAGE value="se agregaron los steps del metodo post" />
+    <option name="LAST_COMMIT_MESSAGE" value="se agregaron los steps del metodo post" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/APIAutomation$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1673844556631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
