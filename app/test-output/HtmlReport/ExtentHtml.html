@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 15, 2023 09:53:00 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 18, 2023 04:53:45 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -65,6 +66,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,20 +78,13 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@LoginUnsuccessful</a></li>
-					<li><a href='#'>@testUsersOnRegresAPI</a></li>
-					<li><a href='#'>@UpdateUserPatch</a></li>
-					<li><a href='#'>@ListResource</a></li>
-					<li><a href='#'>@DeleteUser</a></li>
-					<li><a href='#'>@ListUserInvalidPage</a></li>
-					<li><a href='#'>@LoginSuccessful</a></li>
-					<li><a href='#'>@SigleUserInvalid</a></li>
-					<li><a href='#'>@SigleUser</a></li>
-					<li><a href='#'>@ListUser</a></li>
-					<li><a href='#'>@CreateUser</a></li>
-					<li><a href='#'>@RegisterSuccessful</a></li>
-					<li><a href='#'>@UpdateUserPut</a></li>
-					<li><a href='#'>@RegisterUnsuccessful</a></li>
+					<li><a href='#'>@Ping</a></li>
+					<li><a href='#'>@RegresionBooker_GET</a></li>
+					<li><a href='#'>@RegresionBooker_PUT-PATCH</a></li>
+					<li><a href='#'>@Regresion</a></li>
+					<li><a href='#'>@RegresionBooker_Delete</a></li>
+					<li><a href='#'>@RegresionBooker_POST</a></li>
+					<li><a href='#'>@Smoke</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -131,12 +126,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$75%'>
+                    <span class='strong'>3</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -149,12 +144,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>13</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='92%'>
+                    <span class='strong'>12</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='7%'>
+                    1</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -169,12 +164,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>39</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='98%'>
+                    <span class='strong'>50</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1%'>
+                    1</span> steps failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -199,8 +194,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>test scenarios for the API: https://reqres.in/</span>
-						<span class='test-time'>Jan 15, 2023 09:53:00 PM</span>
+						<span class='test-name'>Realizar pruebas al metodo Delete de la API RESTFUL - BOOKER</span>
+						<span class='test-time'>Jan 18, 2023 04:53:46 PM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -213,402 +208,556 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 01.552</span>
+	<span class='duration right label'>00 00 02.693</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, i can send a Get Request and receive a list of user</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se permita eliminar registros del servicio con un token valido y un id valido</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@ListUser</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+				<span class='category label'>@RegresionBooker_Delete</span>
 		</div>
 	
 	<ul class='steps'>
 		<li test-id='3' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para realizar peticiones Delete https://restful-booker.herokuapp.com</div>
 
 
 		</li>
 		<li test-id='4' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUSerList(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a GET request to the endpoint /api/users?page=2</div>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.crearBookingPost(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una peticion al endpoint /booking para crear un registro de insumo para eliminarlo pl_crearBooking</div>
 
 
 		</li>
 		<li test-id='5' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateRespGet(java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the user George is on the list and status 200</div>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.validarBookingCreado(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se cree correctamente el insumo y valido el codigo de estatus 200 OK</div>
+
+
+		</li>
+		<li test-id='6' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.delBookingCorrecto(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud para borrar un registro al endpoint /booking/</div>
+
+
+		</li>
+		<li test-id='7' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.validateDelBooking(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se borre correctamente con el codigo de estatus 201 Created</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='6' status='pass'>
+<div class='scenario node' test-id='8' status='pass'>
 
-	<span class='duration right label'>00 00 00.283</span>
+	<span class='duration right label'>00 00 01.145</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, i can send an invalid get request with a non-existent page and not receive user information</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@ListUserInvalidPage</span>
-				<span class='category label'>@testUsersOnRegresAPI</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+				<span class='category label'>@RegresionBooker_Delete</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='7' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='9' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para realizar peticiones Delete https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='8' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUSerListInvalid(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a GET request with invalid page parameter to the endpoint /api/users?page=245646</div>
+		<li test-id='10' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.crearBookingPost(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una peticion al endpoint /booking para crear un registro de insumo para eliminarlo pl_crearBooking</div>
 
 
 		</li>
-		<li test-id='9' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateInvalidPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the data does not exist by sending an invalid page</div>
-
-
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='10' status='pass'>
-
-	<span class='duration right label'>00 00 00.210</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, i can send a Get Request and receive a specific user</div>
-	</div>
-	
-	
-		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@SigleUser</span>
-		</div>
-	
-	<ul class='steps'>
-		<li test-id='11' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='11' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.validarBookingCreado(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se cree correctamente el insumo y valido el codigo de estatus 200 OK</div>
 
 
 		</li>
 		<li test-id='12' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.getSpecificUser(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a GET request to get a specific user /api/users/2</div>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.delBookingSinToken(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud delete con un token incorrecto y al endpoint /booking/</div>
 
 
 		</li>
 		<li test-id='13' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateSpecificUser(java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate the Fisrt name Janet specified in the response and status code 200</div>
+			<div class="step-name" title="(apiautomation.steps.DeleteAPIBookerSteps.validateDelBookingSinToken(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que no se permita eliminar sin token con el codigo de estatus 403 Forbidden</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='14' status='pass'>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Realizar pruebas a los metodos GET de la API RESTFUL - BOOKER</span>
+						<span class='test-time'>Jan 18, 2023 04:53:50 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
 
-	<span class='duration right label'>00 00 00.544</span>
+<div class='scenario node' test-id='15' status='pass'>
+
+	<span class='duration right label'>00 00 00.773</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, i can send a Invalid user Get Request and obtain status code 404</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@SigleUserInvalid</span>
+				<span class='category label'>@RegresionBooker_GET</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='15' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='16' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para solicitar peticiones GET https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='16' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.getSpecificUserInvalid(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a GET request with a non-existent user /api/users/8593</div>
+		<li test-id='17' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.getBookingsIds(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud para obtener todos los registros del servicio al endpoint /booking</div>
 
 
 		</li>
-		<li test-id='17' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateSigleUserStatusCode(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that no information is obtained status code 404</div>
+		<li test-id='18' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.validateBookigsIds(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se obtenga informacion en la consulta y el codigo de estatus 200 OK</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='18' status='pass'>
+<div class='scenario node' test-id='19' status='fail'>
 
-	<span class='duration right label'>00 00 00.242</span>
+	<span class='duration right label'>00 00 00.475</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, i can send a Get Request and receive a Resource list</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verificar que se obtenga información al realizar una consulta por id al servicio</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@ListResource</span>
+				<span class='category label'>@RegresionBooker_GET</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='19' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='20' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para solicitar peticiones GET https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='20' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.getResourceList(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a request to get the list of Resources /api/unknown</div>
+		<li test-id='21' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.getBookingById(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud para obtener la informacion del folio 582 al endpoint /booking/</div>
 
 
 		</li>
-		<li test-id='21' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateCantResources(int,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate the list of 6 resources received in the response and status code 200</div>
+		<li test-id='22' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.validateBookigById(java.lang.String,java.lang.String,int))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at apiautomation.steps.GetAPIBookerSteps.validateBookigById(GetAPIBookerSteps.java:63)
+	at ?.Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK(file:///C:/Users/Miguel%20Espejo/Documents/APIAutomation/app/src/test/resources/features/Get_BookerAPI.feature:19)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='23' status='pass'>
+
+	<span class='duration right label'>00 00 00.662</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se obtenga información del servicio al realizar una consulta mediante Nombre y Apellido</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@RegresionBooker_GET</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='24' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para solicitar peticiones GET https://restful-booker.herokuapp.com</div>
+
+
+		</li>
+		<li test-id='25' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.getBookingByName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud de consulta para obtener la informacion con el nombre John y apellido Smith /booking?firstname=John&lastname=Smith</div>
+
+
+		</li>
+		<li test-id='26' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.validateBookigByName(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se obtenga la relacion de Ids que contengan el nombre y apellido y el codigo de estatus 200 OK</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='22' status='pass'>
+<div class='scenario node' test-id='27' status='pass'>
 
-	<span class='duration right label'>00 00 00.576</span>
+	<span class='duration right label'>00 00 00.540</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, I can send a Post request to create a new user</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@CreateUser</span>
+				<span class='category label'>@RegresionBooker_GET</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='23' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='28' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para solicitar peticiones GET https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='24' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.createUserPost(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a POST request to create user with a valid body: CreateUserPay to the endpoint /api/users</div>
+		<li test-id='29' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.getBookingByFechas(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud de consulta con un rango de checkin=2022-01-10&checkout=2023-01-12 al endpoint /booking?checkin=2022-01-10&checkout=2023-01-12</div>
 
 
 		</li>
-		<li test-id='25' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateUserCreated(java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the created user Roberto Carlos exists in the response and status code 201</div>
+		<li test-id='30' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.validateBookigByFechas(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se obtenga la relacion de ids registrados en el rango de fechas y el codigo de estatus 200 OK</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='26' status='pass'>
+<div class='scenario node' test-id='31' status='pass'>
 
-	<span class='duration right label'>00 00 00.512</span>
+	<span class='duration right label'>00 00 00.601</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, I can send a Put request to update a name user</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que el servicio se encuentre disponible</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@UpdateUserPut</span>
+				<span class='category label'>@RegresionBooker_GET</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Ping</span>
+				<span class='category label'>@Regresion</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='27' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='32' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para solicitar peticiones GET https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='28' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.updateUserPut(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a PUT request with the body: UpdNameUserPay to update the username to the endpoint /api/users/2</div>
+		<li test-id='33' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.solicitarPing(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud al servicio para revisar disponibilidad al endpoint /ping</div>
 
 
 		</li>
-		<li test-id='29' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateUpdateUser(java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the name change was made to Arturo Alarcon and the status code 200</div>
+		<li test-id='34' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.validarServicioEnLinea(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido la disponibilidad del servicio con el codigo de estado 201 Created</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='30' status='pass'>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>Realizar pruebas a los metodos POST de la API RESTFUL - BOOKER</span>
+						<span class='test-time'>Jan 18, 2023 04:53:53 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
 
-	<span class='duration right label'>00 00 00.539</span>
+<div class='scenario node' test-id='36' status='pass'>
+
+	<span class='duration right label'>00 00 00.523</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, I can send a Put request to update a Job user</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@UpdateUserPatch</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+				<span class='category label'>@RegresionBooker_POST</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='31' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='37' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PostAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Que puedo acceder al servicio con la URI https://restful-booker.herokuapp.com para probar el metodo POST</div>
 
 
 		</li>
-		<li test-id='32' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.updateUserJobPatch(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a PATCH request with the body: UpdJobUserPay to update the username to the endpoint /api/users/2</div>
+		<li test-id='38' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PostAPIBookerSteps.crearToken(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud con las credenciales correctas pl_Auth al endpoint /auth</div>
 
 
 		</li>
-		<li test-id='33' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateUpdateJobUser(java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the job change was made to QA Engineer and the status code 200</div>
+		<li test-id='39' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PostAPIBookerSteps.validarGenToken(java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then valido que se genere el token correctamente y el codigo de estatus sea 200 OK</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='34' status='pass'>
+<div class='scenario node' test-id='40' status='pass'>
 
-	<span class='duration right label'>00 00 00.527</span>
+	<span class='duration right label'>00 00 00.592</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, I can send a Delete request to erase user</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se permita crear bookings sin inconvenientes</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@DeleteUser</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+				<span class='category label'>@RegresionBooker_POST</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='35' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='41' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PostAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Que puedo acceder al servicio con la URI https://restful-booker.herokuapp.com para probar el metodo POST</div>
 
 
 		</li>
-		<li test-id='36' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendDeleteUSer(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a DELETE request to the endpoint /api/users/2</div>
+		<li test-id='42' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PostAPIBookerSteps.crearBookingPost(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una peticion POST con el pl_crearBooking correcto al endpoint /booking</div>
 
 
 		</li>
-		<li test-id='37' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateDeleteStatusCode(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the user was correctly removed from the list and status code 204</div>
+		<li test-id='43' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PostAPIBookerSteps.validarBookingCreado(java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se cree correctamente el Registro con el nombre: Carloss y el codigo de estatus sea 200 OK</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='38' status='pass'>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>Realizar pruebas a los metodos PUT-PATCH de la API RESTFUL - BOOKER</span>
+						<span class='test-time'>Jan 18, 2023 04:53:54 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
 
-	<span class='duration right label'>00 00 00.510</span>
+<div class='scenario node' test-id='45' status='pass'>
+
+	<span class='duration right label'>00 00 01.194</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, i can send a Post request to successfully register the user</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se actualice correctamente el Nombre, apellido y el precio total</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@RegisterSuccessful</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+				<span class='category label'>@RegresionBooker_PUT-PATCH</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='39' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='46' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para realizar peticiones PUT-PATCH https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='40' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.reqToRegister(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a POST request with a valid body RegisterUserPay to register to the endpoint /api/register</div>
+		<li test-id='47' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.crearBookingPost(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una peticion al endpoint /booking para crear un registro de insumo para poder actualizar pl_crearBooking</div>
 
 
 		</li>
-		<li test-id='41' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateRegister(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the user registered successfully and status code 200</div>
+		<li test-id='48' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.validarBookingCreado(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se cree correctamente registro y valido el codigo de estatus 200 OK</div>
+
+
+		</li>
+		<li test-id='49' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.updBookingCorrecto(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud para actualizar la informacion del Booking Pl_UpdCorrecto al endpoint /booking/</div>
+
+
+		</li>
+		<li test-id='50' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.validateUpdBooking(java.lang.String,java.lang.String,java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then valido que se actualice correctamente el nombre Carlos el apellido Martinez y el precio 45 y el codigo de estatus 200 OK</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='42' status='pass'>
+<div class='scenario node' test-id='51' status='pass'>
 
-	<span class='duration right label'>00 00 00.539</span>
+	<span class='duration right label'>00 00 01.107</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, i can send a invalid Post request to register the user</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@RegisterUnsuccessful</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+				<span class='category label'>@RegresionBooker_PUT-PATCH</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='43' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='52' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para realizar peticiones PUT-PATCH https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='44' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.reqToInvalidRegister(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a POST request to register user with an invalid password InvalidRegisterUserPay body /api/register</div>
+		<li test-id='53' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.crearBookingPost(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una peticion al endpoint /booking para crear un registro de insumo para poder actualizar pl_crearBooking</div>
 
 
 		</li>
-		<li test-id='45' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateInvalidRegister(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the error message and status code 400</div>
+		<li test-id='54' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.validarBookingCreado(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se cree correctamente registro y valido el codigo de estatus 200 OK</div>
+
+
+		</li>
+		<li test-id='55' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.updBookingSinToken(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud de actualizacion sin contar con un token valido Pl_UpdCorrecto al endpoint /booking/</div>
+
+
+		</li>
+		<li test-id='56' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.validateUpdBookingSinToken(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then valido el codigo de estatus 403 Forbidden al intentar realizar una actualizacion sin token</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='46' status='pass'>
+<div class='scenario node' test-id='57' status='pass'>
 
-	<span class='duration right label'>00 00 00.511</span>
+	<span class='duration right label'>00 00 01.164</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, I can send a Post request to login successfully</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@LoginSuccessful</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+				<span class='category label'>@RegresionBooker_PUT-PATCH</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='47' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='58' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para realizar peticiones PUT-PATCH https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='48' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.reqToLogin(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a POST request with a valid body LoginSucessFulPay for login /api/login</div>
+		<li test-id='59' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.crearBookingPost(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una peticion al endpoint /booking para crear un registro de insumo para poder actualizar pl_crearBooking</div>
 
 
 		</li>
-		<li test-id='49' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateLogin(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that login is allowed successfully and status code 200</div>
+		<li test-id='60' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.validarBookingCreado(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se cree correctamente registro y valido el codigo de estatus 200 OK</div>
+
+
+		</li>
+		<li test-id='61' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.patchBookingCorrecto(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud de actualizacion con solo el nombre y apellido de la persona Pl_patchCorrecto al endpoint /booking/</div>
+
+
+		</li>
+		<li test-id='62' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.validateUpdBookingPatchCorrecto(java.lang.String,java.lang.String,int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que el nombre actualizado sea Juan y el apellido actualizado sea Perez y el codigo de estatus 200 OK</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='50' status='pass'>
+<div class='scenario node' test-id='63' status='pass'>
 
-	<span class='duration right label'>00 00 00.546</span>
+	<span class='duration right label'>00 00 01.130</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: As a user, I can send a Invalid Post request to login</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@testUsersOnRegresAPI</span>
-				<span class='category label'>@LoginUnsuccessful</span>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Regresion</span>
+				<span class='category label'>@RegresionBooker_PUT-PATCH</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='51' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.sendReqGetUri(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I can send a request for the https://reqres.in/</div>
+		<li test-id='64' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.accesoAlservicio(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Ingreso a la API restful Booker para realizar peticiones PUT-PATCH https://restful-booker.herokuapp.com</div>
 
 
 		</li>
-		<li test-id='52' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.reqToInvalidLogin(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I send a POST request to login with an invalid body InvalidLoginPay to the endpoint /api/login</div>
+		<li test-id='65' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.crearBookingPost(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una peticion al endpoint /booking para crear un registro de insumo para poder actualizar pl_crearBooking</div>
 
 
 		</li>
-		<li test-id='53' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(apiautomation.steps.RegresAPIuserSteps.validateInvalidLogin(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I can validate that the missing password error message and the status code 400</div>
+		<li test-id='66' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.validarBookingCreado(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que se cree correctamente registro y valido el codigo de estatus 200 OK</div>
+
+
+		</li>
+		<li test-id='67' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.patchBookingSinToken(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Envio una solicitud de actualizacion de nombre y apellido sin token Pl_patchCorrecto al endpoint /booking/</div>
+
+
+		</li>
+		<li test-id='68' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(apiautomation.steps.PutPatchAPIBookerSteps.validatePatchdBookingSinToken(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Valido que no se actualice la informacion con el codigo de estatus 403 Forbidden</div>
 
 
 		</li>
@@ -658,7 +807,7 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@LoginUnsuccessful</span>
+						<span class='category-name'>@Ping</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -680,8 +829,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 15, 2023 09:53:07 PM</td>
-										<td class='linked' test-id='50'>As a user, I can send a Invalid Post request to login</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
+										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -691,14 +840,68 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@testUsersOnRegresAPI</span>
+						<span class='category-name'>@RegresionBooker_GET</span>
 						<span class='category-status right'>
-						<span class='label pass'>13</span>
+						<span class='label pass'>4</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 13</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 18, 2023 04:53:50 PM</td>
+										<td class='linked' test-id='15'>Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:50 PM</td>
+										<td class='linked' test-id='19'>Verificar que se obtenga información al realizar una consulta por id al servicio</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:51 PM</td>
+										<td class='linked' test-id='23'>Verificar que se obtenga información del servicio al realizar una consulta mediante Nombre y Apellido</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:52 PM</td>
+										<td class='linked' test-id='27'>Verificar que se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:52 PM</td>
+										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@RegresionBooker_PUT-PATCH</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
 							
 							
 						</div>
@@ -713,68 +916,23 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 15, 2023 09:53:00 PM</td>
-										<td class='linked' test-id='2'>As a user, i can send a Get Request and receive a list of user</td>
+										<td>Jan 18, 2023 04:53:54 PM</td>
+										<td class='linked' test-id='45'>Verificar que se actualice correctamente el Nombre, apellido y el precio total</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 15, 2023 09:53:02 PM</td>
-										<td class='linked' test-id='6'>As a user, i can send an invalid get request with a non-existent page and not receive user information</td>
+										<td>Jan 18, 2023 04:53:55 PM</td>
+										<td class='linked' test-id='51'>Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 15, 2023 09:53:02 PM</td>
-										<td class='linked' test-id='10'>As a user, i can send a Get Request and receive a specific user</td>
+										<td>Jan 18, 2023 04:53:56 PM</td>
+										<td class='linked' test-id='57'>Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 15, 2023 09:53:02 PM</td>
-										<td class='linked' test-id='14'>As a user, i can send a Invalid user Get Request and obtain status code 404</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:03 PM</td>
-										<td class='linked' test-id='18'>As a user, i can send a Get Request and receive a Resource list</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:03 PM</td>
-										<td class='linked' test-id='22'>As a user, I can send a Post request to create a new user</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:04 PM</td>
-										<td class='linked' test-id='26'>As a user, I can send a Put request to update a name user</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:04 PM</td>
-										<td class='linked' test-id='30'>As a user, I can send a Put request to update a Job user</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:05 PM</td>
-										<td class='linked' test-id='34'>As a user, I can send a Delete request to erase user</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:05 PM</td>
-										<td class='linked' test-id='38'>As a user, i can send a Post request to successfully register the user</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:06 PM</td>
-										<td class='linked' test-id='42'>As a user, i can send a invalid Post request to register the user</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:06 PM</td>
-										<td class='linked' test-id='46'>As a user, I can send a Post request to login successfully</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 15, 2023 09:53:07 PM</td>
-										<td class='linked' test-id='50'>As a user, I can send a Invalid Post request to login</td>
+										<td>Jan 18, 2023 04:53:57 PM</td>
+										<td class='linked' test-id='63'>Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -784,14 +942,108 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@UpdateUserPatch</span>
+						<span class='category-name'>@Regresion</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>12</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 12</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 18, 2023 04:53:46 PM</td>
+										<td class='linked' test-id='2'>Verificar que se permita eliminar registros del servicio con un token valido y un id valido</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:49 PM</td>
+										<td class='linked' test-id='8'>Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:50 PM</td>
+										<td class='linked' test-id='15'>Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:50 PM</td>
+										<td class='linked' test-id='19'>Verificar que se obtenga información al realizar una consulta por id al servicio</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:51 PM</td>
+										<td class='linked' test-id='23'>Verificar que se obtenga información del servicio al realizar una consulta mediante Nombre y Apellido</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:52 PM</td>
+										<td class='linked' test-id='27'>Verificar que se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:52 PM</td>
+										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:53 PM</td>
+										<td class='linked' test-id='36'>Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:53 PM</td>
+										<td class='linked' test-id='40'>Verificar que se permita crear bookings sin inconvenientes</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:54 PM</td>
+										<td class='linked' test-id='45'>Verificar que se actualice correctamente el Nombre, apellido y el precio total</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:55 PM</td>
+										<td class='linked' test-id='51'>Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:56 PM</td>
+										<td class='linked' test-id='57'>Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:57 PM</td>
+										<td class='linked' test-id='63'>Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@RegresionBooker_Delete</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -806,8 +1058,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 15, 2023 09:53:04 PM</td>
-										<td class='linked' test-id='30'>As a user, I can send a Put request to update a Job user</td>
+										<td>Jan 18, 2023 04:53:46 PM</td>
+										<td class='linked' test-id='2'>Verificar que se permita eliminar registros del servicio con un token valido y un id valido</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:49 PM</td>
+										<td class='linked' test-id='8'>Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -817,14 +1074,14 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@ListResource</span>
+						<span class='category-name'>@RegresionBooker_POST</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -839,8 +1096,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 15, 2023 09:53:03 PM</td>
-										<td class='linked' test-id='18'>As a user, i can send a Get Request and receive a Resource list</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
+										<td class='linked' test-id='36'>Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:53 PM</td>
+										<td class='linked' test-id='40'>Verificar que se permita crear bookings sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -850,15 +1112,16 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@DeleteUser</span>
+						<span class='category-name'>@Smoke</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>12</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 12</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -872,305 +1135,68 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 15, 2023 09:53:05 PM</td>
-										<td class='linked' test-id='34'>As a user, I can send a Delete request to erase user</td>
+										<td>Jan 18, 2023 04:53:46 PM</td>
+										<td class='linked' test-id='2'>Verificar que se permita eliminar registros del servicio con un token valido y un id valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@ListUserInvalidPage</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 15, 2023 09:53:02 PM</td>
-										<td class='linked' test-id='6'>As a user, i can send an invalid get request with a non-existent page and not receive user information</td>
+										<td>Jan 18, 2023 04:53:49 PM</td>
+										<td class='linked' test-id='8'>Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@LoginSuccessful</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 15, 2023 09:53:06 PM</td>
-										<td class='linked' test-id='46'>As a user, I can send a Post request to login successfully</td>
+										<td>Jan 18, 2023 04:53:50 PM</td>
+										<td class='linked' test-id='15'>Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@SigleUserInvalid</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
+										<td>Jan 18, 2023 04:53:50 PM</td>
+										<td class='linked' test-id='19'>Verificar que se obtenga información al realizar una consulta por id al servicio</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
-								</thead>
-								<tbody>
 									<tr>
-										<td>Jan 15, 2023 09:53:02 PM</td>
-										<td class='linked' test-id='14'>As a user, i can send a Invalid user Get Request and obtain status code 404</td>
+										<td>Jan 18, 2023 04:53:51 PM</td>
+										<td class='linked' test-id='23'>Verificar que se obtenga información del servicio al realizar una consulta mediante Nombre y Apellido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@SigleUser</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 15, 2023 09:53:02 PM</td>
-										<td class='linked' test-id='10'>As a user, i can send a Get Request and receive a specific user</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
+										<td class='linked' test-id='27'>Verificar que se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@ListUser</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 15, 2023 09:53:00 PM</td>
-										<td class='linked' test-id='2'>As a user, i can send a Get Request and receive a list of user</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
+										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@CreateUser</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 15, 2023 09:53:03 PM</td>
-										<td class='linked' test-id='22'>As a user, I can send a Post request to create a new user</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
+										<td class='linked' test-id='36'>Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@RegisterSuccessful</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 15, 2023 09:53:05 PM</td>
-										<td class='linked' test-id='38'>As a user, i can send a Post request to successfully register the user</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
+										<td class='linked' test-id='40'>Verificar que se permita crear bookings sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@UpdateUserPut</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 15, 2023 09:53:04 PM</td>
-										<td class='linked' test-id='26'>As a user, I can send a Put request to update a name user</td>
+										<td>Jan 18, 2023 04:53:54 PM</td>
+										<td class='linked' test-id='45'>Verificar que se actualice correctamente el Nombre, apellido y el precio total</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@RegisterUnsuccessful</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
+										<td>Jan 18, 2023 04:53:55 PM</td>
+										<td class='linked' test-id='51'>Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</td>
+										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
-								</thead>
-								<tbody>
 									<tr>
-										<td>Jan 15, 2023 09:53:06 PM</td>
-										<td class='linked' test-id='42'>As a user, i can send a invalid Post request to register the user</td>
+										<td>Jan 18, 2023 04:53:56 PM</td>
+										<td class='linked' test-id='57'>Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:57 PM</td>
+										<td class='linked' test-id='63'>Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -1187,7 +1213,93 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 18, 2023 04:53:51 PM</td>
+										<td class='linked' test-id='22'>Then Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at apiautomation.steps.GetAPIBookerSteps.validateBookigById(GetAPIBookerSteps.java:63)
+	at ?.Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK(file:///C:/Users/Miguel%20Espejo/Documents/APIAutomation/app/src/test/resources/features/Get_BookerAPI.feature:19)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -1195,7 +1307,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -1207,25 +1319,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>39</div>
+					<div class='panel-lead'>51</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 15, 2023 09:53:00 PM</div>
+					<div class='panel-lead'>Jan 18, 2023 04:53:45 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 15, 2023 09:53:07 PM</div>
+			 		<div class='panel-lead'>Jan 18, 2023 04:53:58 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 07.421</div>
+					<div class='panel-lead'>00 00 12.996</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -1241,7 +1353,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@LoginUnsuccessful</td>
+							<td>@Ping</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -1250,8 +1362,17 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@testUsersOnRegresAPI</td>
-							<td>13</td>
+							<td>@RegresionBooker_GET</td>
+							<td>4</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									80%
+							</td>
+						</tr>
+						<tr>
+							<td>@RegresionBooker_PUT-PATCH</td>
+							<td>4</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -1259,8 +1380,17 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@UpdateUserPatch</td>
+							<td>@Regresion</td>
+							<td>12</td>
 							<td>1</td>
+							<td>0</td>
+							<td>
+									92.308%
+							</td>
+						</tr>
+						<tr>
+							<td>@RegresionBooker_Delete</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -1268,8 +1398,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@ListResource</td>
-							<td>1</td>
+							<td>@RegresionBooker_POST</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -1277,93 +1407,12 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@DeleteUser</td>
+							<td>@Smoke</td>
+							<td>12</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@ListUserInvalidPage</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@LoginSuccessful</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@SigleUserInvalid</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@SigleUser</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@ListUser</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@CreateUser</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@RegisterSuccessful</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@UpdateUserPut</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@RegisterUnsuccessful</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
+									92.308%
 							</td>
 						</tr>
 					</table>
@@ -1377,24 +1426,24 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+                parentCount: 4,
+				passParent: 3,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 13,
-				passChild: 13,
-				failChild: 0,
+				passChild: 12,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 39,
-				passGrandChild: 39,
-				failGrandChild: 0,
+				grandChildCount: 51,
+				passGrandChild: 50,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
@@ -1405,7 +1454,7 @@
 		
 		<script>
 			var timeline = {
-			        "test scenarios for the API: https://reqres.in/":7.122
+			        "Realizar pruebas al metodo Delete de la API RESTFUL - BOOKER":3.846,"Realizar pruebas a los metodos GET de la API RESTFUL - BOOKER":3.068,"Realizar pruebas a los metodos POST de la API RESTFUL - BOOKER":1.117,"Realizar pruebas a los metodos PUT-PATCH de la API RESTFUL - BOOKER":4.602
 			};
 		</script>
 		
