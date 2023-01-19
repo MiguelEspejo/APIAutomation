@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="se crearon los steps para los metodos put, patch, delete">
+    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="Se agregaron los steps faltantes GET y se agregaron algunos tags @Regresion y @Smoke">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/runner/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/runner/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/DeleteAPIBookerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/DeleteAPIBookerSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/GetAPIBookerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/GetAPIBookerSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Put-Patch_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/features/Put-Patch_BookerAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/CreateUserPay.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/CreateUserPay.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/InvalidLoginPay.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/InvalidLoginPay.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/InvalidRegisterUserPay.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/InvalidRegisterUserPay.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/LoginSucessFulPay.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/LoginSucessFulPay.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/RegisterUserPay.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/RegisterUserPay.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/UpdJobUserPay.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/UpdJobUserPay.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/UpdNameUserPay.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/UpdNameUserPay.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/target/cucumber-reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/cucumber-reports.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
     </list>
@@ -244,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674035247286</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se agregaron los steps faltantes GET y se agregaron algunos tags @Regresion y @Smoke">
+      <created>1674085941235</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674085941235</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,7 +302,8 @@
     <MESSAGE value="Actualización de features para los metodos get y put-patch" />
     <MESSAGE value="se agregaron los steps del metodo post" />
     <MESSAGE value="se crearon los steps para los metodos put, patch, delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="se crearon los steps para los metodos put, patch, delete" />
+    <MESSAGE value="Se agregaron los steps faltantes GET y se agregaron algunos tags @Regresion y @Smoke" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregaron los steps faltantes GET y se agregaron algunos tags @Regresion y @Smoke" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/APIAutomation$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1673844556631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

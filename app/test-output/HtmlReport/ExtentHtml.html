@@ -50,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 18, 2023 12:30:15 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 18, 2023 04:53:45 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -78,12 +78,12 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@RegresionBooker_GET</a></li>
-					<li><a href='#'>@Regresion</a></li>
-					<li><a href='#'>@RegresionBooker_POST</a></li>
-					<li><a href='#'>@RegresionBooker_Delete</a></li>
-					<li><a href='#'>@RegresionBooker_PUT-PATCH</a></li>
 					<li><a href='#'>@Ping</a></li>
+					<li><a href='#'>@RegresionBooker_GET</a></li>
+					<li><a href='#'>@RegresionBooker_PUT-PATCH</a></li>
+					<li><a href='#'>@Regresion</a></li>
+					<li><a href='#'>@RegresionBooker_Delete</a></li>
+					<li><a href='#'>@RegresionBooker_POST</a></li>
 					<li><a href='#'>@Smoke</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -195,7 +195,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Realizar pruebas al metodo Delete de la API RESTFUL - BOOKER</span>
-						<span class='test-time'>Jan 18, 2023 12:30:16 PM</span>
+						<span class='test-time'>Jan 18, 2023 04:53:46 PM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -208,7 +208,7 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 02.461</span>
+	<span class='duration right label'>00 00 02.693</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se permita eliminar registros del servicio con un token valido y un id valido</div>
 	</div>
@@ -250,7 +250,7 @@
 </div>
 <div class='scenario node' test-id='8' status='pass'>
 
-	<span class='duration right label'>00 00 01.018</span>
+	<span class='duration right label'>00 00 01.145</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto</div>
 	</div>
@@ -295,7 +295,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='14'>
 					<div class='test-heading'>
 						<span class='test-name'>Realizar pruebas a los metodos GET de la API RESTFUL - BOOKER</span>
-						<span class='test-time'>Jan 18, 2023 12:30:19 PM</span>
+						<span class='test-time'>Jan 18, 2023 04:53:50 PM</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -308,7 +308,7 @@
 
 <div class='scenario node' test-id='15' status='pass'>
 
-	<span class='duration right label'>00 00 01.127</span>
+	<span class='duration right label'>00 00 00.773</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados</div>
 	</div>
@@ -340,7 +340,7 @@
 </div>
 <div class='scenario node' test-id='19' status='fail'>
 
-	<span class='duration right label'>00 00 00.508</span>
+	<span class='duration right label'>00 00 00.475</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verificar que se obtenga información al realizar una consulta por id al servicio</div>
 	</div>
@@ -367,18 +367,44 @@
 			<div class="step-name" title="(apiautomation.steps.GetAPIBookerSteps.validateBookigById(java.lang.String,java.lang.String,int))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK</div>
 
 
-					<textarea disabled class="code-block">java.lang.AssertionError: El nombre John no existe en la respuesta. 
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at apiautomation.steps.GetAPIBookerSteps.validateBookigById(GetAPIBookerSteps.java:67)
-	at ?.Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK(file:///C:/Users/Miguel%20Espejo/Documents/APIAutomation/app/src/test/resources/features/Get_BookerAPI.feature:18)
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at apiautomation.steps.GetAPIBookerSteps.validateBookigById(GetAPIBookerSteps.java:63)
+	at ?.Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK(file:///C:/Users/Miguel%20Espejo/Documents/APIAutomation/app/src/test/resources/features/Get_BookerAPI.feature:19)
 </textarea>
 		</li>
 	</ul>
 </div>
 <div class='scenario node' test-id='23' status='pass'>
 
-	<span class='duration right label'>00 00 00.909</span>
+	<span class='duration right label'>00 00 00.662</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se obtenga información del servicio al realizar una consulta mediante Nombre y Apellido</div>
 	</div>
@@ -410,7 +436,7 @@
 </div>
 <div class='scenario node' test-id='27' status='pass'>
 
-	<span class='duration right label'>00 00 00.612</span>
+	<span class='duration right label'>00 00 00.540</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut</div>
 	</div>
@@ -442,7 +468,7 @@
 </div>
 <div class='scenario node' test-id='31' status='pass'>
 
-	<span class='duration right label'>00 00 00.606</span>
+	<span class='duration right label'>00 00 00.601</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que el servicio se encuentre disponible</div>
 	</div>
@@ -478,7 +504,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='35'>
 					<div class='test-heading'>
 						<span class='test-name'>Realizar pruebas a los metodos POST de la API RESTFUL - BOOKER</span>
-						<span class='test-time'>Jan 18, 2023 12:30:23 PM</span>
+						<span class='test-time'>Jan 18, 2023 04:53:53 PM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -491,7 +517,7 @@
 
 <div class='scenario node' test-id='36' status='pass'>
 
-	<span class='duration right label'>00 00 00.587</span>
+	<span class='duration right label'>00 00 00.523</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</div>
 	</div>
@@ -523,7 +549,7 @@
 </div>
 <div class='scenario node' test-id='40' status='pass'>
 
-	<span class='duration right label'>00 00 00.586</span>
+	<span class='duration right label'>00 00 00.592</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se permita crear bookings sin inconvenientes</div>
 	</div>
@@ -558,7 +584,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='44'>
 					<div class='test-heading'>
 						<span class='test-name'>Realizar pruebas a los metodos PUT-PATCH de la API RESTFUL - BOOKER</span>
-						<span class='test-time'>Jan 18, 2023 12:30:24 PM</span>
+						<span class='test-time'>Jan 18, 2023 04:53:54 PM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -571,7 +597,7 @@
 
 <div class='scenario node' test-id='45' status='pass'>
 
-	<span class='duration right label'>00 00 01.175</span>
+	<span class='duration right label'>00 00 01.194</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que se actualice correctamente el Nombre, apellido y el precio total</div>
 	</div>
@@ -613,7 +639,7 @@
 </div>
 <div class='scenario node' test-id='51' status='pass'>
 
-	<span class='duration right label'>00 00 01.132</span>
+	<span class='duration right label'>00 00 01.107</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</div>
 	</div>
@@ -655,7 +681,7 @@
 </div>
 <div class='scenario node' test-id='57' status='pass'>
 
-	<span class='duration right label'>00 00 01.144</span>
+	<span class='duration right label'>00 00 01.164</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</div>
 	</div>
@@ -697,7 +723,7 @@
 </div>
 <div class='scenario node' test-id='63' status='pass'>
 
-	<span class='duration right label'>00 00 01.113</span>
+	<span class='duration right label'>00 00 01.130</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</div>
 	</div>
@@ -781,6 +807,39 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
+						<span class='category-name'>@Ping</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 18, 2023 04:53:52 PM</td>
+										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
 						<span class='category-name'>@RegresionBooker_GET</span>
 						<span class='category-status right'>
 						<span class='label pass'>4</span>
@@ -804,28 +863,76 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 18, 2023 12:30:19 PM</td>
+										<td>Jan 18, 2023 04:53:50 PM</td>
 										<td class='linked' test-id='15'>Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:20 PM</td>
+										<td>Jan 18, 2023 04:53:50 PM</td>
 										<td class='linked' test-id='19'>Verificar que se obtenga información al realizar una consulta por id al servicio</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:21 PM</td>
+										<td>Jan 18, 2023 04:53:51 PM</td>
 										<td class='linked' test-id='23'>Verificar que se obtenga información del servicio al realizar una consulta mediante Nombre y Apellido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:22 PM</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
 										<td class='linked' test-id='27'>Verificar que se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:22 PM</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
 										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@RegresionBooker_PUT-PATCH</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 18, 2023 04:53:54 PM</td>
+										<td class='linked' test-id='45'>Verificar que se actualice correctamente el Nombre, apellido y el precio total</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:55 PM</td>
+										<td class='linked' test-id='51'>Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:56 PM</td>
+										<td class='linked' test-id='57'>Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 18, 2023 04:53:57 PM</td>
+										<td class='linked' test-id='63'>Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -858,106 +965,68 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 18, 2023 12:30:16 PM</td>
+										<td>Jan 18, 2023 04:53:46 PM</td>
 										<td class='linked' test-id='2'>Verificar que se permita eliminar registros del servicio con un token valido y un id valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:18 PM</td>
+										<td>Jan 18, 2023 04:53:49 PM</td>
 										<td class='linked' test-id='8'>Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:19 PM</td>
+										<td>Jan 18, 2023 04:53:50 PM</td>
 										<td class='linked' test-id='15'>Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:20 PM</td>
+										<td>Jan 18, 2023 04:53:50 PM</td>
 										<td class='linked' test-id='19'>Verificar que se obtenga información al realizar una consulta por id al servicio</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:21 PM</td>
+										<td>Jan 18, 2023 04:53:51 PM</td>
 										<td class='linked' test-id='23'>Verificar que se obtenga información del servicio al realizar una consulta mediante Nombre y Apellido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:22 PM</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
 										<td class='linked' test-id='27'>Verificar que se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:22 PM</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
 										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:23 PM</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
 										<td class='linked' test-id='36'>Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:24 PM</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
 										<td class='linked' test-id='40'>Verificar que se permita crear bookings sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:24 PM</td>
+										<td>Jan 18, 2023 04:53:54 PM</td>
 										<td class='linked' test-id='45'>Verificar que se actualice correctamente el Nombre, apellido y el precio total</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:25 PM</td>
+										<td>Jan 18, 2023 04:53:55 PM</td>
 										<td class='linked' test-id='51'>Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:27 PM</td>
+										<td>Jan 18, 2023 04:53:56 PM</td>
 										<td class='linked' test-id='57'>Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:28 PM</td>
+										<td>Jan 18, 2023 04:53:57 PM</td>
 										<td class='linked' test-id='63'>Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@RegresionBooker_POST</span>
-						<span class='category-status right'>
-						<span class='label pass'>2</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 18, 2023 12:30:23 PM</td>
-										<td class='linked' test-id='36'>Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 18, 2023 12:30:24 PM</td>
-										<td class='linked' test-id='40'>Verificar que se permita crear bookings sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -989,12 +1058,12 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 18, 2023 12:30:16 PM</td>
+										<td>Jan 18, 2023 04:53:46 PM</td>
 										<td class='linked' test-id='2'>Verificar que se permita eliminar registros del servicio con un token valido y un id valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:18 PM</td>
+										<td>Jan 18, 2023 04:53:49 PM</td>
 										<td class='linked' test-id='8'>Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
@@ -1005,14 +1074,14 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@RegresionBooker_PUT-PATCH</span>
+						<span class='category-name'>@RegresionBooker_POST</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -1027,56 +1096,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 18, 2023 12:30:24 PM</td>
-										<td class='linked' test-id='45'>Verificar que se actualice correctamente el Nombre, apellido y el precio total</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
+										<td class='linked' test-id='36'>Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:25 PM</td>
-										<td class='linked' test-id='51'>Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 18, 2023 12:30:27 PM</td>
-										<td class='linked' test-id='57'>Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Jan 18, 2023 12:30:28 PM</td>
-										<td class='linked' test-id='63'>Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Ping</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Jan 18, 2023 12:30:22 PM</td>
-										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
+										<td class='linked' test-id='40'>Verificar que se permita crear bookings sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -1109,67 +1135,67 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 18, 2023 12:30:16 PM</td>
+										<td>Jan 18, 2023 04:53:46 PM</td>
 										<td class='linked' test-id='2'>Verificar que se permita eliminar registros del servicio con un token valido y un id valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:18 PM</td>
+										<td>Jan 18, 2023 04:53:49 PM</td>
 										<td class='linked' test-id='8'>Verificar que no se permita solicitar eliminar un registro cuando no se tiene el token correcto</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:19 PM</td>
+										<td>Jan 18, 2023 04:53:50 PM</td>
 										<td class='linked' test-id='15'>Verificar que al consultar el endpoint se obtenga toda la relación de Ids registrados</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:20 PM</td>
+										<td>Jan 18, 2023 04:53:50 PM</td>
 										<td class='linked' test-id='19'>Verificar que se obtenga información al realizar una consulta por id al servicio</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:21 PM</td>
+										<td>Jan 18, 2023 04:53:51 PM</td>
 										<td class='linked' test-id='23'>Verificar que se obtenga información del servicio al realizar una consulta mediante Nombre y Apellido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:22 PM</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
 										<td class='linked' test-id='27'>Verificar que se obtenga información al realizar la consulta con un rango de fechas de checkIn y checkOut</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:22 PM</td>
+										<td>Jan 18, 2023 04:53:52 PM</td>
 										<td class='linked' test-id='31'>Verificar que el servicio se encuentre disponible</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:23 PM</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
 										<td class='linked' test-id='36'>Verificar que al enviar las credenciales correctas se obtenga un token que permita actualizar o eliminar registros en la API Booker</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:24 PM</td>
+										<td>Jan 18, 2023 04:53:53 PM</td>
 										<td class='linked' test-id='40'>Verificar que se permita crear bookings sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:24 PM</td>
+										<td>Jan 18, 2023 04:53:54 PM</td>
 										<td class='linked' test-id='45'>Verificar que se actualice correctamente el Nombre, apellido y el precio total</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:25 PM</td>
+										<td>Jan 18, 2023 04:53:55 PM</td>
 										<td class='linked' test-id='51'>Verificar que no se permita actualizar información en el servicio cuando se realice una solicitud de actualizaciónn sin contar con un token valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:27 PM</td>
+										<td>Jan 18, 2023 04:53:56 PM</td>
 										<td class='linked' test-id='57'>Verificar que al enviar solo el nombre y apellido de la persona en la petición con token correcto se actualice sin inconvenientes</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jan 18, 2023 12:30:28 PM</td>
+										<td>Jan 18, 2023 04:53:57 PM</td>
 										<td class='linked' test-id='63'>Verificar que no se permita solicitar una actualización de solo nombre y apellido sin contar con un token valido</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
@@ -1222,14 +1248,40 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 18, 2023 12:30:21 PM</td>
+										<td>Jan 18, 2023 04:53:51 PM</td>
 										<td class='linked' test-id='22'>Then Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK</td>
 										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: El nombre John no existe en la respuesta. 
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at apiautomation.steps.GetAPIBookerSteps.validateBookigById(GetAPIBookerSteps.java:67)
-	at ?.Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK(file:///C:/Users/Miguel%20Espejo/Documents/APIAutomation/app/src/test/resources/features/Get_BookerAPI.feature:18)
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at apiautomation.steps.GetAPIBookerSteps.validateBookigById(GetAPIBookerSteps.java:63)
+	at ?.Valido que se obtenga informacion correspondiente al ID con el nombre John y apellido Smith y el codigo de estatus 200 OK(file:///C:/Users/Miguel%20Espejo/Documents/APIAutomation/app/src/test/resources/features/Get_BookerAPI.feature:19)
 </textarea>
 										</td>
 									</tr>
@@ -1273,19 +1325,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 18, 2023 12:30:15 PM</div>
+					<div class='panel-lead'>Jan 18, 2023 04:53:45 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 18, 2023 12:30:29 PM</div>
+			 		<div class='panel-lead'>Jan 18, 2023 04:53:58 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 13.318</div>
+					<div class='panel-lead'>00 00 12.996</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -1301,39 +1353,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
+							<td>@Ping</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
 							<td>@RegresionBooker_GET</td>
 							<td>4</td>
 							<td>1</td>
 							<td>0</td>
 							<td>
 									80%
-							</td>
-						</tr>
-						<tr>
-							<td>@Regresion</td>
-							<td>12</td>
-							<td>1</td>
-							<td>0</td>
-							<td>
-									92.308%
-							</td>
-						</tr>
-						<tr>
-							<td>@RegresionBooker_POST</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@RegresionBooker_Delete</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
 							</td>
 						</tr>
 						<tr>
@@ -1346,8 +1380,26 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@Ping</td>
+							<td>@Regresion</td>
+							<td>12</td>
 							<td>1</td>
+							<td>0</td>
+							<td>
+									92.308%
+							</td>
+						</tr>
+						<tr>
+							<td>@RegresionBooker_Delete</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@RegresionBooker_POST</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -1402,7 +1454,7 @@
 		
 		<script>
 			var timeline = {
-			        "Realizar pruebas al metodo Delete de la API RESTFUL - BOOKER":3.487,"Realizar pruebas a los metodos GET de la API RESTFUL - BOOKER":3.775,"Realizar pruebas a los metodos POST de la API RESTFUL - BOOKER":1.175,"Realizar pruebas a los metodos PUT-PATCH de la API RESTFUL - BOOKER":4.57
+			        "Realizar pruebas al metodo Delete de la API RESTFUL - BOOKER":3.846,"Realizar pruebas a los metodos GET de la API RESTFUL - BOOKER":3.068,"Realizar pruebas a los metodos POST de la API RESTFUL - BOOKER":1.117,"Realizar pruebas a los metodos PUT-PATCH de la API RESTFUL - BOOKER":4.602
 			};
 		</script>
 		
