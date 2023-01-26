@@ -4,9 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="cmabios workspace">
+    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="cambios en el readme">
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/runner/runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/API_DemoblazeSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/Payloads/pl_SignIn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/Payloads/pl_SignIn_passInv.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/Payloads/pl_SignIn_usrInv.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/Payloads/pl_SignUp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/features/API_Demoblaze.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/apiautomation/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/apiautomation/runner/runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/apiautomation/runner/runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Delete_BookerAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Get_BookerAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Post_BookerAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Put-Patch_BookerAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/RegresUserApi.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/runner/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/DeleteAPIBookerSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/GetAPIBookerSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PostAPIBookerSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PutPatchAPIBookerSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Delete_BookerAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Get_BookerAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/Put-Patch_BookerAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/features/RegresUserApi.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_Auth.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_AuthCredInv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_AuthCredVacias.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_Auth_passInv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_Auth_usrInv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_crearBooking.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_crearBookingDatoFaltante.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_crearBookingFechaInv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/POST/pl_crearTotPriceDec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_UpdCorrecto.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_UpdFechaInv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_pachFechaInv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/PUT-PATCH/Pl_patchCorrecto.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/CreateUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/InvalidLoginPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/InvalidRegisterUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/LoginSucessFulPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/RegisterUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/UpdJobUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/payloads/SandBox/UpdNameUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/cucumber-reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/cucumber-reports.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +91,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/build.gradle" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,15 +111,26 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Runner">
-    <configuration name="Feature: RegresUserApi" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Miguel Espejo\Documents\APIAutomation\app\src\test\resources\features" />
+      <recent name="C:\Users\Miguel Espejo\Documents\APIAutomation\app\src\test\resources\Payload" />
+      <recent name="C:\Users\Miguel Espejo\Documents\APIAutomation\app\src\test\resources" />
+      <recent name="C:\Users\Miguel Espejo\Documents\APIAutomation\app\src\test\resources\payloads\SandBox\DemoBlazeAPI" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="apiautomation.runner" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Feature: API_Demoblaze">
+    <configuration name="Feature: API_Demoblaze" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/RegresUserApi.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/API_Demoblaze.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: RegresUserApi" />
+      <option name="SUGGESTED_NAME" value="Feature: API_Demoblaze" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -82,15 +142,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: As a user, i can send a Get Request and receive a list of user" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verificar que no se permita obtener token con un usuario con una contraseña incorrecta" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/RegresUserApi.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/API_Demoblaze.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
-      <option name="NAME_FILTER" value="^As a user\, i can send a Get Request and receive a list of user$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^As a user\, i can send a Get Request and receive a list of user$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: As a user, i can send a Get Request and receive a list of user" />
+      <option name="NAME_FILTER" value="^Verificar que no se permita obtener token con un usuario con una contraseña incorrecta$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que no se permita obtener token con un usuario con una contraseña incorrecta$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verificar que no se permita obtener token con un usuario con una contraseña incorrecta" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -102,15 +162,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: As a user, i can send a Get Request and receive a specific user" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verificar que no se permita obtener token con un usuario que no este registrado" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/RegresUserApi.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/API_Demoblaze.feature" />
       <option name="GLUE" value="apiautomation.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="APIAutomation.app.test" />
-      <option name="NAME_FILTER" value="^As a user\, i can send a Get Request and receive a specific user$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^As a user\, i can send a Get Request and receive a specific user$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: As a user, i can send a Get Request and receive a specific user" />
+      <option name="NAME_FILTER" value="^Verificar que no se permita obtener token con un usuario que no este registrado$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar que no se permita obtener token con un usuario que no este registrado$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verificar que no se permita obtener token con un usuario que no este registrado" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -170,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Runner" />
-        <item itemvalue="Cucumber Java.Scenario: As a user, i can send a Get Request and receive a list of user" />
-        <item itemvalue="Cucumber Java.Feature: RegresUserApi" />
-        <item itemvalue="Cucumber Java.Scenario: As a user, i can send a Get Request and receive a specific user" />
+        <item itemvalue="Cucumber Java.Feature: API_Demoblaze" />
         <item itemvalue="Gradle.runner" />
+        <item itemvalue="Gradle.Runner" />
+        <item itemvalue="Cucumber Java.Scenario: Verificar que no se permita obtener token con un usuario con una contraseña incorrecta" />
+        <item itemvalue="Cucumber Java.Scenario: Verificar que no se permita obtener token con un usuario que no este registrado" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674087709777</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cambios en el readme">
+      <created>1674702114703</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674702114703</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +277,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cmabios workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="cmabios workspace" />
+    <MESSAGE value="cambios en el readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios en el readme" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="io.restassured.internal.RestAssuredResponseImpl" memberName="logRepository" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/APIAutomation$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1673844556631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
