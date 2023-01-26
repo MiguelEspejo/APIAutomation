@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="" />
+    <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="cmabios workspace">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/apiautomation/runner/runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/apiautomation/runner/runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/apiautomation/steps/PostAPIBookerSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/apiautomation/steps/PostAPIBookerSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Delete_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/features/Delete_BookerAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Get_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/features/Get_BookerAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Post_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/features/Post_BookerAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Put-Patch_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/features/Put-Patch_BookerAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/CreateUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/InvalidLoginPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/InvalidRegisterUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/LoginSucessFulPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/RegisterUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/UpdJobUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/UpdNameUserPay.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PutPatchAPIBookerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PutPatchAPIBookerSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/cucumber-reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/cucumber-reports.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,14 +49,33 @@
       </state>
     </system>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KWPspocPsAxk10SoKZqD3MIPMo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: As a user, i can send a Get Request and receive a list of user">
+}</component>
+  <component name="RunManager" selected="Gradle.Runner">
     <configuration name="Feature: RegresUserApi" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/app/src/test/resources/features/RegresUserApi.feature" />
@@ -145,16 +183,47 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Runner" />
         <item itemvalue="Cucumber Java.Scenario: As a user, i can send a Get Request and receive a list of user" />
         <item itemvalue="Cucumber Java.Feature: RegresUserApi" />
         <item itemvalue="Cucumber Java.Scenario: As a user, i can send a Get Request and receive a specific user" />
         <item itemvalue="Gradle.runner" />
-        <item itemvalue="Gradle.Runner" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="" />
+      <created>1674087576721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674087576721</updated>
+    </task>
+    <task id="LOCAL-00001" summary="cmabios workspace">
+      <created>1674087709777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674087709777</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cmabios workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="cmabios workspace" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/APIAutomation$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1673844556631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

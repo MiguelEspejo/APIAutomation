@@ -12,11 +12,15 @@ import java.io.File;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertTrue;
 
+
 public class PutPatchAPIBookerSteps {
     private static RequestSpecification request;
     private Response response;
     private ValidatableResponse json;
     private String jsonResponseBookingId;
+
+
+
 
 
     //background
