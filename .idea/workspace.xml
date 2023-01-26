@@ -7,22 +7,6 @@
     <list default="true" id="7a9f9fde-803f-4936-b5bb-7cf17a4ab38d" name="Changes" comment="cmabios workspace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/apiautomation/runner/runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/apiautomation/runner/runner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/apiautomation/steps/PostAPIBookerSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/apiautomation/steps/PostAPIBookerSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Delete_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/features/Delete_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Get_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/features/Get_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Post_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/features/Post_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/features/Put-Patch_BookerAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/app/bin/test/features/Put-Patch_BookerAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/CreateUserPay.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/InvalidLoginPay.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/InvalidRegisterUserPay.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/LoginSucessFulPay.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/RegisterUserPay.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/UpdJobUserPay.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bin/test/payloads/UpdNameUserPay.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PutPatchAPIBookerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/apiautomation/steps/PutPatchAPIBookerSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/cucumber-reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/cucumber-reports.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +40,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/src/test/resources/features/Post_BookerAPI.feature" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
